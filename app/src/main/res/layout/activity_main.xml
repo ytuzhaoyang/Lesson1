@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tengyun.lesson1.MainActivity"
+    android:id="@+id/drawlayout"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab"
+            app:tabTextColor="#000"
+            app:tabSelectedTextColor="#f00"
+            app:tabMode="scrollable"
+            app:tabIndicatorColor="#00F"
+            />
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/pager"
+            >
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+    <!--导航控件
+         自定义属性：
+          1.添加命名空间
+          app:itemTextAppearance=""字体属性
+    -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        app:menu="@menu/navigation"
+        app:headerLayout="@layout/menu_head"
+        >
+
+    </android.support.design.widget.NavigationView>
+    
+</android.support.v4.widget.DrawerLayout>

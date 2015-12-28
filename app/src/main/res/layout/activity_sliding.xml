@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SlidingPaneLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f00"
+    android:id="@+id/sliding_pane"
+    tools:context="com.tengyun.lesson1.SlidingActivity">
+    <!--先写菜单，再写主布局
+         5.1 md立体化设计，卡片布局，控件有厚度
+         5.0以上控件有自己的Z轴，按Z轴高度覆盖
+         SlidingPaneLayout只能打开一侧
+    -->
+    <LinearLayout
+        android:id="@+id/menu"
+        android:orientation="vertical"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#0f0"
+        ></LinearLayout>
+    <!--设置主布局比菜单低一点，适配5.0以上手机,api21/以上才有效
+         android:elevation="5dp"
+    -->
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:elevation="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            />
+    </FrameLayout>
+
+</android.support.v4.widget.SlidingPaneLayout>
